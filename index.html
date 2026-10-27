@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OISTUDIO | 브랜드 숏폼 기획·제작</title>
+<meta name="description" content="기업·브랜드를 위한 숏폼 기획부터 편집까지. OISTUDIO">
+<meta property="og:title" content="OISTUDIO | 브랜드 숏폼 기획·제작">
+<meta property="og:description" content="기업·브랜드를 위한 숏폼 기획부터 편집까지.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+<style>
+:root{--bg:#0a0a0a;--bg2:#141414;--line:#262626;--text:#ffffff;--sub:#9a9a9a;--accent:#c8ff3d;--on-accent:#0a0a0a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Pretendard,system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+section{padding:72px 0;border-top:1px solid var(--line)}
+h1{font-size:clamp(30px,6vw,54px);line-height:1.22;font-weight:800;letter-spacing:-.02em}
+h2{font-size:clamp(24px,4vw,34px);font-weight:800;letter-spacing:-.02em;margin-bottom:28px}
+.tag{display:inline-block;border:1px solid var(--accent);color:var(--accent);font-size:13px;font-weight:700;padding:4px 12px;border-radius:99px;margin-bottom:16px}
+.hl{color:var(--accent)}
+.sub{color:var(--sub)}
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:rgba(10,10,10,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{font-weight:800;font-size:20px;letter-spacing:.04em}
+.logo i{color:var(--accent);font-style:normal}
+.menu{display:flex;gap:22px;align-items:center;font-size:14px;color:var(--sub)}
+.btn{display:inline-block;background:var(--accent);color:var(--on-accent);font-weight:800;padding:13px 26px;border-radius:99px;font-size:15px;border:0;cursor:pointer}
+.btn.ghost{background:transparent;border:1px solid #444;color:var(--text);font-weight:600}
+.btn.sm{padding:8px 18px;font-size:13px}
+@media(max-width:640px){.menu a:not(.btn){display:none}}
+/* hero */
+.hero{padding:64px 0 48px;border:0}
+.hero h1 span{display:block}
+.hero p.lead{margin-top:20px;font-size:18px;color:var(--sub);max-width:620px}
+.cta{display:flex;gap:10px;margin-top:28px;flex-wrap:wrap}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}
+.chips span{background:var(--bg2);border:1px solid var(--line);border-radius:99px;padding:8px 16px;font-size:14px}
+.strip-head{display:flex;justify-content:space-between;align-items:baseline;margin:44px 0 14px;font-weight:700}
+.strip-head a{color:var(--accent);font-size:14px}
+.strip{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;scrollbar-width:thin}
+.strip .work{flex:0 0 150px;scroll-snap-align:start}
+@media(min-width:900px){.strip .work{flex-basis:166px}}
+/* table */
+.rows{display:grid;gap:10px}
+.row{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.row div{padding:18px 20px}
+.row div:last-child{background:#1a1f0c;color:#e8ffa8}
+.row b{color:#fff}
+.row div:last-child b{color:var(--accent)}
+@media(max-width:640px){.row{grid-template-columns:1fr}}
+/* cards */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:24px}
+.card h3{font-size:19px;margin-bottom:8px}
+.card p{color:var(--sub);font-size:15px}
+.card.acc{background:var(--accent);border:0;color:var(--on-accent)}
+.card.acc p{color:#2b3a00}
+@media(max-width:800px){.grid3{grid-template-columns:1fr}}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.compare .card.hot{border-color:var(--accent)}
+@media(max-width:640px){.compare{grid-template-columns:1fr}}
+/* works */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px;position:sticky;top:56px;z-index:5;background:var(--bg);padding:10px 0}
+.tabs button{background:transparent;border:1px solid var(--line);color:var(--text);padding:9px 18px;border-radius:99px;cursor:pointer;font:inherit;font-size:14px}
+.tabs button.on{background:var(--text);color:#000;font-weight:700;border-color:var(--text)}
+.works{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:900px){.works{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.works{grid-template-columns:repeat(2,1fr);gap:12px}}
+.work{cursor:pointer}
+.thumb{position:relative;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:linear-gradient(160deg,#242424,#121212);display:flex;align-items:center;justify-content:center;transition:transform .2s}
+.work:hover .thumb{transform:translateY(-3px)}
+.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.thumb .no{position:absolute;top:10px;left:12px;font-size:12px;font-weight:700;background:rgba(0,0,0,.55);padding:2px 8px;border-radius:99px;z-index:1}
+.play{position:relative;width:50px;height:50px;border-radius:50%;background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.3);display:flex;align-items:center;justify-content:center}
+.play:after{content:"";border-left:15px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px}
+.work small{display:block;color:var(--sub);font-size:13px;margin-top:8px}
+.work b{font-size:15px;display:block;line-height:1.35}
+.more{text-align:center;margin-top:32px}
+.more .count{color:var(--sub);font-size:14px;margin-bottom:12px}
+/* price */
+.price{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:900px){.price{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.price{grid-template-columns:1fr}}
+.pcard{border:1px solid var(--line);border-radius:16px;padding:24px;background:var(--bg2)}
+.pcard.best{background:var(--accent);border:0;color:var(--on-accent)}
+.pcard .t{font-size:13px;font-weight:700;color:var(--accent)}
+.pcard.best .t{color:var(--on-accent)}
+.pcard .n{font-size:38px;font-weight:800;margin:8px 0}
+.pcard .n small{font-size:16px;font-weight:600}
+.pcard p{font-size:14px;color:var(--sub)}
+.pcard.best p{color:#2b3a00}
+.inc{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}
+.inc span{background:var(--bg2);border:1px solid var(--line);border-radius:99px;padding:8px 16px;font-size:14px}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:36px}
+@media(max-width:800px){.steps{grid-template-columns:1fr 1fr}}
+.step{border-top:2px solid #fff;padding-top:14px}
+.step i{color:var(--accent);font-style:normal;font-weight:700}
+.step b{display:block;margin:4px 0}
+.step p{font-size:14px;color:var(--sub)}
+details{border-top:1px solid var(--line);padding:18px 0}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between}
+summary:after{content:"+";color:var(--sub)}
+details[open] summary:after{content:"−"}
+details p{margin-top:10px;color:var(--sub);font-size:15px}
+.end{text-align:center;padding:80px 0}
+.end h2{margin-bottom:12px}
+footer{padding:28px 0;text-align:center;color:var(--sub);font-size:13px;border-top:1px solid var(--line)}
+/* modal */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;z-index:50;padding:20px}
+.modal.on{display:flex}
+.mwrap{display:flex;align-items:center;gap:16px}
+.modal .box{position:relative;width:min(340px,70vw);aspect-ratio:9/16;background:#000;border-radius:14px;overflow:hidden}
+.modal iframe{width:100%;height:100%;border:0}
+.modal .x{position:fixed;top:14px;right:18px;background:none;border:0;color:#fff;font-size:34px;cursor:pointer;z-index:2}
+.nav-btn{background:rgba(255,255,255,.12);border:0;color:#fff;width:44px;height:44px;border-radius:50%;font-size:20px;cursor:pointer;flex:0 0 auto}
+.minfo{position:fixed;bottom:16px;left:0;right:0;text-align:center;font-size:14px;color:#ccc}
+.empty{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--sub);text-align:center;padding:20px;font-size:14px}
+@media(max-width:520px){.nav-btn{position:fixed;bottom:50px;z-index:2}#prev{left:20px}#next{right:20px}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a href="#top" class="logo">OI<i>STUDIO</i></a>
+  <div class="menu">
+    <a href="#works">작업물</a><a href="#price">가격</a><a href="#faq">자주 묻는 질문</a>
+    <a class="btn sm" data-kakao href="#">카톡 상담</a>
+  </div>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+  <span class="tag">브랜드 숏폼 · 기획부터 편집까지</span>
+  <h1><span>영상은 올리는데,</span><span>왜 문의로 <span class="hl" style="display:inline">안 이어질까요?</span></span></h1>
+  <p class="lead">브랜드가 말하고 싶은 얘기가 아니라, 고객이 멈춰서 보는 얘기로 시작합니다. OISTUDIO는 기획부터 편집까지 한 번에 맡아 드려요.</p>
+  <div class="cta">
+    <a class="btn" data-kakao href="#">카톡으로 상담하기</a>
+    <a class="btn ghost" href="#works">작업물 보기</a>
+  </div>
+  <div class="chips">
+    <span>기획부터 편집까지 한 번에</span><span>단건 <b>12만 원</b>부터</span><span>기업·브랜드 전문</span>
+  </div>
+  <div class="strip-head"><span>대표 작업물 · 눌러서 바로 보기</span><a href="#works">전체 보기 →</a></div>
+  <div class="strip" id="strip"></div>
+</div></header>
+
+<section><div class="wrap">
+  <h2>혹시 이런 <span class="hl">고민</span>, 하고 계신가요?</h2>
+  <div class="rows">
+    <div class="row"><div>영상을 꾸준히 올리는데 <b>반응은 늘 제자리</b>예요</div><div>고객이 멈추는 <b>첫 3초</b>부터 설계해요</div></div>
+    <div class="row"><div>편집은 맡겼는데 <b>문의는 그대로</b>예요</div><div>편집 전에 <b>누구에게 무슨 말을 할지</b> 먼저 정해요</div></div>
+    <div class="row"><div>뭘 찍고 무슨 말을 해야 할지 <b>모르겠어요</b></div><div>장면과 대본을 <b>기획안에 다 적어 드려요</b></div></div>
+    <div class="row"><div>대본 고민하다 <b>하루가 다 가요</b></div><div>촬영본만 주세요. <b>나머지는 OISTUDIO가</b> 해요</div></div>
+  </div>
+</div></section>
+
+<section id="works"><div class="wrap">
+  <span class="tag">작업물</span>
+  <h2>업종도, 형식도 다양하게 만들었어요</h2>
+  <div class="tabs" id="tabs"></div>
+  <div class="works" id="works-grid"></div>
+  <div class="more" id="more"></div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>왜 <span class="hl">OISTUDIO</span>일까요?</h2>
+  <div class="grid3">
+    <div class="card acc"><h3>기획이 먼저</h3><p>예쁜 편집보다, 보는 사람이 끝까지 보는 구성을 먼저 생각해요.</p></div>
+    <div class="card acc"><h3>조사 기반</h3><p>제품 후기와 경쟁사 콘텐츠에서 고객이 반응하는 말을 찾아요.</p></div>
+    <div class="card acc"><h3>한 번에 진행</h3><p>조사, 기획안, 대본, 편집까지 창구 하나로 끝나요.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>같은 제품도 첫 문장이 바뀌면 달라집니다</h2>
+  <div class="compare">
+    <div class="card"><p style="font-size:13px">기능으로 시작하면</p><h3 style="margin-top:8px;font-weight:600">"고함량 성분을 담은 신제품이 출시되었습니다"</h3></div>
+    <div class="card hot"><p class="hl" style="font-size:13px">고객의 불편으로 시작하면</p><h3 style="margin-top:8px">"이거 때문에 매번 고생하셨죠?"</h3></div>
+  </div>
+  <p class="sub" style="margin-top:14px;font-size:14px">누가 봐도 '내 얘기'인 문장이 먼저 나와야 끝까지 봅니다. (예시 문구는 실제 작업물 사례로 교체하세요)</p>
+</div></section>
+
+<section id="price"><div class="wrap">
+  <span class="tag">가격</span>
+  <h2>모든 구성에 기획부터 편집까지 들어 있어요</h2>
+  <div class="inc"><span>제품·경쟁사 조사</span><span>첫 3초 문구 제안</span><span>기획안·대본 작성</span><span>영상 편집(자막·음악)</span></div>
+  <div class="price" id="price-grid"></div>
+  <p class="sub" style="margin-top:14px;font-size:13px">* VAT 별도 여부, 수정 횟수 등 세부 조건은 상담 시 안내드려요.</p>
+</div></section>
+
+<section><div class="wrap">
+  <span class="tag">진행 방식</span>
+  <h2>이렇게 진행돼요</h2>
+  <div class="steps">
+    <div class="step"><i>1</i><b>상담</b><p>카톡으로 제품 링크와 지금 가장 답답한 점을 보내 주세요.</p></div>
+    <div class="step"><i>2</i><b>자료 전달</b><p>제품 사진, 촬영본, 상세페이지 주소를 전달해 주세요.</p></div>
+    <div class="step"><i>3</i><b>기획안 확인</b><p>누구에게 무엇을 말할지 정리하고, 첫 3초 문구를 고르세요.</p></div>
+    <div class="step"><i>4</i><b>제작</b><p>확인하신 기획안대로 편집합니다.</p></div>
+    <div class="step"><i>5</i><b>완성본 전달</b><p>1차본 확인 후 수정을 거쳐 최종본을 드려요.</p></div>
+  </div>
+  <div id="faq">
+    <details><summary>찍어 둔 영상이 없어도 되나요?</summary><p>상담 때 상황에 맞게 안내드려요. 촬영 가이드를 기획안에 함께 담아 드릴 수 있어요.</p></details>
+    <details><summary>얼굴이 안 나와도 되나요?</summary><p>네, 제품 중심 영상이나 자막 중심 구성으로도 기획할 수 있어요.</p></details>
+    <details><summary>수정은 어떻게 하나요?</summary><p>1차 완성본을 보신 뒤 수정 요청을 주시면 반영해 최종본을 드려요. (수정 범위는 상담 시 확정)</p></details>
+    <details><summary>몇 편 구성이 좋을까요?</summary><p>한 편만으로는 어떤 메시지가 반응하는지 알기 어려워요. 여러 각도로 테스트하려면 패키지를 추천드려요.</p></details>
+    <details><summary>조회수나 매출을 보장하나요?</summary><p>보장하지는 않아요. 대신 반응이 나올 확률을 높이는 기획과 구성에 집중합니다.</p></details>
+    <details><summary>영상을 올려 주기도 하나요?</summary><p>제작 전달까지가 기본이에요. 업로드 대행은 상담 시 따로 안내드려요.</p></details>
+  </div>
+</div></section>
+
+<section class="end"><div class="wrap">
+  <h2>우리 브랜드 영상, 어디부터 바꿔야 할까요?</h2>
+  <p class="sub" style="margin-bottom:24px">제품 링크와 지금 가장 답답한 점 한 줄이면 충분해요.</p>
+  <a class="btn" data-kakao href="#">카톡으로 상담하기</a>
+</div></section>
+
+<footer>© OISTUDIO. All rights reserved.</footer>
+
+<div class="modal" id="modal">
+  <button class="x" id="close" aria-label="닫기">×</button>
+  <div class="mwrap">
+    <button class="nav-btn" id="prev" aria-label="이전">‹</button>
+    <div class="box" id="player"></div>
+    <button class="nav-btn" id="next" aria-label="다음">›</button>
+  </div>
+  <div class="minfo" id="minfo"></div>
+</div>
+
+<script>
+/* ============ 여기만 수정하세요 ============ */
+const KAKAO_LINK = "#"; // 카카오 오픈채팅 주소로 교체 (예: https://open.kakao.com/o/xxxx)
+
+const T1 = "광고 소재형", T2 = "스토리·후기형", T3 = "리뷰·체험형";
+
+// 작업물 20개: w("제목", "업종 · 제품", 형식, "유튜브 영상ID", "썸네일 경로(선택)")
+// 유튜브 영상ID = 주소의 v= 뒤 값 (쇼츠는 shorts/ 뒤 값). 썸네일은 비워두면 유튜브 기본 썸네일 사용
+const w = (title, cat, type, y = "", thumb = "") => ({ title, cat, type, y, thumb });
+const WORKS = [
+  w("작업물 제목 01", "업종 · 제품", T1),
+  w("작업물 제목 02", "업종 · 제품", T2),
+  w("작업물 제목 03", "업종 · 제품", T3),
+  w("작업물 제목 04", "업종 · 제품", T1),
+  w("작업물 제목 05", "업종 · 제품", T2),
+  w("작업물 제목 06", "업종 · 제품", T3),
+  w("작업물 제목 07", "업종 · 제품", T1),
+  w("작업물 제목 08", "업종 · 제품", T2),
+  w("작업물 제목 09", "업종 · 제품", T3),
+  w("작업물 제목 10", "업종 · 제품", T1),
+  w("작업물 제목 11", "업종 · 제품", T2),
+  w("작업물 제목 12", "업종 · 제품", T3),
+  w("작업물 제목 13", "업종 · 제품", T1),
+  w("작업물 제목 14", "업종 · 제품", T2),
+  w("작업물 제목 15", "업종 · 제품", T3),
+  w("작업물 제목 16", "업종 · 제품", T1),
+  w("작업물 제목 17", "업종 · 제품", T2),
+  w("작업물 제목 18", "업종 · 제품", T3),
+  w("작업물 제목 19", "업종 · 제품", T1),
+  w("작업물 제목 20", "업종 · 제품", T2)
+];
+const FEATURED = 6;   // 맨 위 '대표 작업물'에 보여줄 개수 (위에서부터)
+const PAGE = 8;       // 작업물 한 번에 보여줄 개수 (더보기 누를 때마다 추가)
+
+// 가격 (원 단위 숫자)
+const PRICES = [
+  {tag:"단건",   count:"1편",  total:120000,  desc:"먼저 한 편 맡겨 보고 싶을 때"},
+  {tag:"패키지", count:"8편",  total:1100000, desc:"일주일에 2편씩 꾸준히 올리고 싶을 때"},
+  {tag:"패키지", count:"10편", total:1200000, desc:"더 자주 올리며 반응 좋은 방향을 찾고 싶을 때"},
+  {tag:"패키지", count:"12편", total:1400000, desc:"일주일에 3편씩, 가장 알뜰하게 맡기고 싶을 때", best:true}
+];
+/* =========================================== */
+
+const $ = id => document.getElementById(id);
+const pad = n => String(n + 1).padStart(2, "0");
+WORKS.forEach((x, i) => x.i = i);
+
+document.querySelectorAll("[data-kakao]").forEach(a => {
+  a.href = KAKAO_LINK;
+  if (KAKAO_LINK !== "#") { a.target = "_blank"; a.rel = "noopener"; }
+});
+
+// 카드
+function card(x) {
+  const src = x.thumb || (x.y ? `https://img.youtube.com/vi/${x.y}/hqdefault.jpg` : "");
+  return `<div class="work" data-i="${x.i}">
+    <div class="thumb"><span class="no">${pad(x.i)}</span>${src ? `<img src="${src}" alt="${x.title}" loading="lazy">` : ""}<div class="play"></div></div>
+    <small>${x.cat}</small><b>${x.title}</b></div>`;
+}
+function bindCards(root) {
+  root.querySelectorAll(".work").forEach(el => el.onclick = () => openVideo(+el.dataset.i));
+}
+
+// 대표 작업물 스트립
+$("strip").innerHTML = WORKS.slice(0, FEATURED).map(card).join("");
+bindCards($("strip"));
+
+// 작업물 그리드 (탭 + 더보기)
+const types = ["전체", ...new Set(WORKS.map(x => x.type))];
+let cur = "전체", shown = PAGE, list = WORKS;
+function renderTabs() {
+  $("tabs").innerHTML = types.map(t => {
+    const n = t === "전체" ? WORKS.length : WORKS.filter(x => x.type === t).length;
+    return `<button class="${t === cur ? "on" : ""}" data-t="${t}">${t} ${n}</button>`;
+  }).join("");
+  $("tabs").querySelectorAll("button").forEach(b => b.onclick = () => {
+    cur = b.dataset.t; shown = PAGE; renderTabs(); renderWorks();
+  });
+}
+function renderWorks() {
+  list = cur === "전체" ? WORKS : WORKS.filter(x => x.type === cur);
+  $("works-grid").innerHTML = list.slice(0, shown).map(card).join("");
+  bindCards($("works-grid"));
+  const left = list.length - shown;
+  $("more").innerHTML = left > 0
+    ? `<p class="count">${Math.min(shown, list.length)} / ${list.length}편</p><button class="btn ghost" id="moreBtn">작업물 더보기 (${left}편 남음)</button>`
+    : `<p class="count">전체 ${list.length}편을 모두 보셨어요</p>`;
+  if (left > 0) $("moreBtn").onclick = () => { shown += PAGE; renderWorks(); };
+}
+renderTabs(); renderWorks();
+
+// 가격
+const fmt = n => { const m = n / 10000; return Number.isInteger(m) ? m : m.toFixed(1); };
+$("price-grid").innerHTML = PRICES.map(p => `
+  <div class="pcard ${p.best ? "best" : ""}">
+    <span class="t">${p.tag} · ${p.count}</span>
+    <div class="n">${fmt(p.total)}<small>만 원</small></div>
+    <p>${p.desc}</p>
+  </div>`).join("");
+
+// 영상 모달 (이전/다음, 키보드 ← → 지원)
+let playing = -1, ctx = WORKS;
+function openVideo(i) {
+  // 현재 보고 있는 탭의 목록 안에서 이동
+  ctx = (cur === "전체" ? WORKS : WORKS.filter(x => x.type === cur));
+  if (!ctx.find(x => x.i === i)) ctx = WORKS;
+  show(i);
+  $("modal").classList.add("on");
+}
+function show(i) {
+  playing = i;
+  const x = WORKS[i];
+  $("player").innerHTML = x.y
+    ? `<iframe src="https://www.youtube.com/embed/${x.y}?autoplay=1&rel=0&playsinline=1" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>`
+    : `<div class="empty">영상 준비 중입니다</div>`;
+  const pos = ctx.findIndex(v => v.i === i) + 1;
+  $("minfo").textContent = `${pos} / ${ctx.length}  ·  ${x.cat}  ·  ${x.title}`;
+}
+function step(d) {
+  const pos = ctx.findIndex(v => v.i === playing);
+  show(ctx[(pos + d + ctx.length) % ctx.length].i);
+}
+function closeVideo() { $("modal").classList.remove("on"); $("player").innerHTML = ""; }
+$("close").onclick = closeVideo;
+$("prev").onclick = () => step(-1);
+$("next").onclick = () => step(1);
+$("modal").onclick = e => { if (e.target.id === "modal" || e.target.className === "mwrap") closeVideo(); };
+document.addEventListener("keydown", e => {
+  if (!$("modal").classList.contains("on")) return;
+  if (e.key === "Escape") closeVideo();
+  if (e.key === "ArrowLeft") step(-1);
+  if (e.key === "ArrowRight") step(1);
+});
+</script>
+</body>
+</html>
