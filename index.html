@@ -28,7 +28,7 @@ h2{font-size:clamp(26px,4.4vw,40px);font-weight:800;letter-spacing:-.03em;line-h
 nav{position:sticky;top:0;z-index:20;background:rgba(10,10,10,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
 .logo{font-weight:800;font-size:20px;letter-spacing:.04em}
-.logo i{color:var(--accent);font-style:normal}
+.logo i{color:#fff;font-style:normal}
 .menu{display:flex;gap:24px;align-items:center;font-size:14px;color:var(--sub)}
 .menu a:hover{color:#fff}
 .btn{display:inline-block;background:var(--accent);color:var(--on);font-weight:800;padding:15px 30px;border-radius:99px;font-size:16px;border:0;cursor:pointer;transition:transform .15s}
@@ -100,6 +100,17 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:5
 .pcard.best hr{border-color:rgba(0,0,0,.2)}
 .pcard p{font-size:14px;color:var(--sub)}
 .pcard.best p{color:#2b3a00}
+.plus{display:flex;justify-content:center;margin:26px 0 8px}
+.plus span{width:46px;height:46px;border-radius:50%;background:var(--accent);color:var(--on);font-size:30px;font-weight:800;display:flex;align-items:center;justify-content:center;line-height:1}
+.addon{display:grid;grid-template-columns:1fr 1fr;gap:32px;border:1px solid var(--accent);background:#12160a;border-radius:22px;padding:34px}
+.addon h3{font-size:26px;margin:4px 0 10px;letter-spacing:-.02em}
+.addon .amt{font-size:46px;font-weight:800;color:var(--accent);margin-top:18px;letter-spacing:-.03em;line-height:1.2}
+.addon .amt small{font-size:18px;font-weight:700}
+.addon .first{display:inline-block;background:var(--accent);color:var(--on);font-weight:800;font-size:14px;padding:6px 14px;border-radius:99px;margin-top:12px}
+.addon ul{list-style:none;display:grid;gap:14px;align-content:center}
+.addon li{font-size:16px;display:flex;gap:10px}
+.addon li:before{content:"✓";color:var(--accent);font-weight:800}
+@media(max-width:760px){.addon{grid-template-columns:1fr;padding:26px 22px;gap:22px}}
 .note{margin-top:26px;background:var(--bg2);border-radius:18px;padding:26px 28px}
 .note h3{font-size:20px;margin-bottom:6px}
 .note p{color:var(--sub);font-size:15px}
@@ -210,6 +221,23 @@ footer{padding:28px 0 90px;text-align:center;color:var(--sub);font-size:13px;bor
   </div>
   <div class="inc"><span>제품·경쟁사 조사</span><span>첫 3초 문구 제안</span><span>기획안·대본 작성</span><span>영상 편집 (자막·음악)</span></div>
   <div class="price" id="price-grid"></div>
+  <div class="plus"><span>+</span></div>
+  <div class="addon">
+    <div>
+      <span class="eyebrow">ADD-ON OPTION</span>
+      <h3>인플루언서 협업 옵션</h3>
+      <p class="sub">영상 제작에 인플루언서 섭외와 피드 게시까지 더한 상품입니다.</p>
+      <div class="amt">+30<small>만 원</small></div>
+      <span class="first">첫 의뢰 시 +25만 원 · 5만 원 할인</span>
+    </div>
+    <ul>
+      <li>영상 제작 상품 내용 모두 포함</li>
+      <li>제품과 브랜드 톤에 맞는 인플루언서 섭외</li>
+      <li>셀프캠 촬영 가이드 제공</li>
+      <li>촬영본 검수 및 숏폼 편집·제작</li>
+      <li>인플루언서 피드에 브랜드 공동 작업자로 게시</li>
+    </ul>
+  </div>
   <div class="note">
     <h3>한 편은 운, 여러 편은 데이터예요</h3>
     <p>같은 제품도 고객마다 반응하는 포인트가 달라요. 여러 편을 다른 각도로 올려야 '먹히는 문장'이 보이고, 편당 가격도 낮아져요.</p>
