@@ -4,123 +4,133 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>OISTUDIO | 브랜드 숏폼 기획·제작</title>
-<meta name="description" content="기업·브랜드를 위한 숏폼 기획부터 편집까지. OISTUDIO">
+<meta name="description" content="조회수는 나오는데 문의가 없다면, 편집이 아니라 기획이 문제입니다. 기업·브랜드 숏폼 기획부터 편집까지 OISTUDIO.">
 <meta property="og:title" content="OISTUDIO | 브랜드 숏폼 기획·제작">
-<meta property="og:description" content="기업·브랜드를 위한 숏폼 기획부터 편집까지.">
+<meta property="og:description" content="조회수는 나오는데 문의가 없다면, 기획부터 다시 보세요.">
 <meta property="og:type" content="website">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 <style>
-:root{--bg:#0a0a0a;--bg2:#141414;--line:#262626;--text:#ffffff;--sub:#9a9a9a;--accent:#c8ff3d;--on-accent:#0a0a0a}
+:root{--bg:#0a0a0a;--bg2:#141414;--line:#242424;--text:#fff;--sub:#9a9a9a;--accent:#c8ff3d;--on:#0a0a0a}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:Pretendard,system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--text);font-family:Pretendard,system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;word-break:keep-all}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-section{padding:72px 0;border-top:1px solid var(--line)}
-h1{font-size:clamp(30px,6vw,54px);line-height:1.22;font-weight:800;letter-spacing:-.02em}
-h2{font-size:clamp(24px,4vw,34px);font-weight:800;letter-spacing:-.02em;margin-bottom:28px}
-.tag{display:inline-block;border:1px solid var(--accent);color:var(--accent);font-size:13px;font-weight:700;padding:4px 12px;border-radius:99px;margin-bottom:16px}
+section{padding:88px 0}
+h1{font-size:clamp(32px,6.4vw,62px);line-height:1.2;font-weight:800;letter-spacing:-.03em}
+h2{font-size:clamp(26px,4.4vw,40px);font-weight:800;letter-spacing:-.03em;line-height:1.3;margin-bottom:12px}
+.eyebrow{display:inline-block;color:var(--accent);font-size:13px;font-weight:800;letter-spacing:.08em;margin-bottom:14px}
 .hl{color:var(--accent)}
 .sub{color:var(--sub)}
+.lead{color:var(--sub);font-size:17px;max-width:600px}
+.head{margin-bottom:36px}
 /* nav */
-nav{position:sticky;top:0;z-index:20;background:rgba(10,10,10,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+nav{position:sticky;top:0;z-index:20;background:rgba(10,10,10,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
 .logo{font-weight:800;font-size:20px;letter-spacing:.04em}
 .logo i{color:var(--accent);font-style:normal}
-.menu{display:flex;gap:22px;align-items:center;font-size:14px;color:var(--sub)}
-.btn{display:inline-block;background:var(--accent);color:var(--on-accent);font-weight:800;padding:13px 26px;border-radius:99px;font-size:15px;border:0;cursor:pointer}
-.btn.ghost{background:transparent;border:1px solid #444;color:var(--text);font-weight:600}
-.btn.sm{padding:8px 18px;font-size:13px}
+.menu{display:flex;gap:24px;align-items:center;font-size:14px;color:var(--sub)}
+.menu a:hover{color:#fff}
+.btn{display:inline-block;background:var(--accent);color:var(--on);font-weight:800;padding:15px 30px;border-radius:99px;font-size:16px;border:0;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;border:1px solid #3a3a3a;color:#fff;font-weight:600}
+.btn.sm{padding:9px 18px;font-size:13px}
 @media(max-width:640px){.menu a:not(.btn){display:none}}
 /* hero */
-.hero{padding:64px 0 48px;border:0}
-.hero h1 span{display:block}
-.hero p.lead{margin-top:20px;font-size:18px;color:var(--sub);max-width:620px}
-.cta{display:flex;gap:10px;margin-top:28px;flex-wrap:wrap}
-.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}
+.hero{padding:84px 0 72px}
+.hero h1{margin:6px 0 22px}
+.hero .big{font-size:clamp(20px,3.2vw,28px);font-weight:700;letter-spacing:-.02em;margin-bottom:12px}
+.cta{display:flex;gap:10px;margin-top:32px;flex-wrap:wrap}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:30px}
 .chips span{background:var(--bg2);border:1px solid var(--line);border-radius:99px;padding:8px 16px;font-size:14px}
-.strip-head{display:flex;justify-content:space-between;align-items:baseline;margin:44px 0 14px;font-weight:700}
-.strip-head a{color:var(--accent);font-size:14px}
-.strip{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;scrollbar-width:thin}
-.strip .work{flex:0 0 150px;scroll-snap-align:start}
-@media(min-width:900px){.strip .work{flex-basis:166px}}
-/* table */
-.rows{display:grid;gap:10px}
-.row{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:14px;overflow:hidden}
-.row div{padding:18px 20px}
-.row div:last-child{background:#1a1f0c;color:#e8ffa8}
+.chips b{color:var(--accent)}
+/* works */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px;position:sticky;top:58px;z-index:5;background:var(--bg);padding:10px 0}
+.tabs button{background:transparent;border:1px solid var(--line);color:#fff;padding:9px 18px;border-radius:99px;cursor:pointer;font:inherit;font-size:14px}
+.tabs button.on{background:#fff;color:#000;font-weight:700;border-color:#fff}
+.works{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:600px){.works{grid-template-columns:repeat(2,1fr);gap:12px}}
+.work{cursor:pointer}
+.thumb{position:relative;aspect-ratio:9/16;border-radius:16px;overflow:hidden;background:#181818;display:flex;align-items:center;justify-content:center;transition:transform .2s,box-shadow .2s}
+.work:hover .thumb{transform:translateY(-4px);box-shadow:0 10px 30px rgba(200,255,61,.12)}
+.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.thumb .no{position:absolute;top:10px;left:10px;font-size:12px;font-weight:800;background:var(--accent);color:var(--on);padding:2px 9px;border-radius:99px;z-index:1}
+.play{position:relative;width:52px;height:52px;border-radius:50%;background:rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.35);display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
+.play:after{content:"";border-left:15px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px}
+.work .cap{margin-top:10px;font-size:14px;font-weight:600;color:#ddd}
+.work .cap small{display:block;color:var(--sub);font-weight:400;font-size:13px}
+/* pain table */
+.rows{display:grid;gap:12px}
+.row{display:grid;grid-template-columns:1fr 1fr;border-radius:16px;overflow:hidden;background:var(--bg2)}
+.row div{padding:22px 24px}
+.row div:last-child{background:#171d08}
 .row b{color:#fff}
 .row div:last-child b{color:var(--accent)}
+.row small{display:block;color:var(--sub);font-size:12px;font-weight:700;letter-spacing:.06em;margin-bottom:4px}
+.row div:last-child small{color:#9fc22f}
 @media(max-width:640px){.row{grid-template-columns:1fr}}
 /* cards */
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.card{background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:24px}
-.card h3{font-size:19px;margin-bottom:8px}
+.card{background:var(--bg2);border-radius:18px;padding:28px}
+.card h3{font-size:20px;margin-bottom:8px}
 .card p{color:var(--sub);font-size:15px}
-.card.acc{background:var(--accent);border:0;color:var(--on-accent)}
-.card.acc p{color:#2b3a00}
+.card .n{font-size:13px;font-weight:800;color:var(--accent);margin-bottom:10px;display:block}
 @media(max-width:800px){.grid3{grid-template-columns:1fr}}
 .compare{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.compare .card.hot{border-color:var(--accent)}
+.compare .hot{outline:1px solid var(--accent);background:#171d08}
+.compare .q{font-size:20px;font-weight:700;margin-top:8px;line-height:1.4}
 @media(max-width:640px){.compare{grid-template-columns:1fr}}
-/* works */
-.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px;position:sticky;top:56px;z-index:5;background:var(--bg);padding:10px 0}
-.tabs button{background:transparent;border:1px solid var(--line);color:var(--text);padding:9px 18px;border-radius:99px;cursor:pointer;font:inherit;font-size:14px}
-.tabs button.on{background:var(--text);color:#000;font-weight:700;border-color:var(--text)}
-.works{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-@media(max-width:900px){.works{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:600px){.works{grid-template-columns:repeat(2,1fr);gap:12px}}
-.work{cursor:pointer}
-.thumb{position:relative;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:linear-gradient(160deg,#242424,#121212);display:flex;align-items:center;justify-content:center;transition:transform .2s}
-.work:hover .thumb{transform:translateY(-3px)}
-.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.thumb .no{position:absolute;top:10px;left:12px;font-size:12px;font-weight:700;background:rgba(0,0,0,.55);padding:2px 8px;border-radius:99px;z-index:1}
-.play{position:relative;width:50px;height:50px;border-radius:50%;background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.3);display:flex;align-items:center;justify-content:center}
-.play:after{content:"";border-left:15px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px}
-.work small{display:block;color:var(--sub);font-size:13px;margin-top:8px}
-.work b{font-size:15px;display:block;line-height:1.35}
-.more{text-align:center;margin-top:32px}
-.more .count{color:var(--sub);font-size:14px;margin-bottom:12px}
 /* price */
-.price{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.inc{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.inc span{background:var(--bg2);border:1px solid var(--line);border-radius:99px;padding:8px 16px;font-size:14px}
+.inc span:before{content:"✓ ";color:var(--accent);font-weight:800}
+.price{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px}
 @media(max-width:900px){.price{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:520px){.price{grid-template-columns:1fr}}
-.pcard{border:1px solid var(--line);border-radius:16px;padding:24px;background:var(--bg2)}
-.pcard.best{background:var(--accent);border:0;color:var(--on-accent)}
-.pcard .t{font-size:13px;font-weight:700;color:var(--accent)}
-.pcard.best .t{color:var(--on-accent)}
-.pcard .n{font-size:38px;font-weight:800;margin:8px 0}
-.pcard .n small{font-size:16px;font-weight:600}
+.pcard{position:relative;border:1px solid var(--line);border-radius:18px;padding:30px 24px 24px;background:var(--bg2)}
+.pcard.best{background:var(--accent);border:0;color:var(--on)}
+.badge{position:absolute;top:-13px;left:20px;background:#fff;color:#000;font-size:13px;font-weight:800;padding:4px 12px;border-radius:99px}
+.pcard.best .badge{background:#000;color:var(--accent)}
+.pcard .t{font-size:14px;font-weight:800;color:var(--accent)}
+.pcard.best .t{color:var(--on)}
+.pcard .n{font-size:42px;font-weight:800;margin:6px 0 0;letter-spacing:-.03em;line-height:1.2}
+.pcard .n small{font-size:16px;font-weight:700}
+.pcard .per{font-size:14px;font-weight:700;margin-bottom:14px}
+.pcard hr{border:0;border-top:1px solid var(--line);margin:14px 0}
+.pcard.best hr{border-color:rgba(0,0,0,.2)}
 .pcard p{font-size:14px;color:var(--sub)}
 .pcard.best p{color:#2b3a00}
-.inc{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}
-.inc span{background:var(--bg2);border:1px solid var(--line);border-radius:99px;padding:8px 16px;font-size:14px}
-/* steps */
-.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:36px}
+.note{margin-top:26px;background:var(--bg2);border-radius:18px;padding:26px 28px}
+.note h3{font-size:20px;margin-bottom:6px}
+.note p{color:var(--sub);font-size:15px}
+/* steps / faq */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:44px}
 @media(max-width:800px){.steps{grid-template-columns:1fr 1fr}}
 .step{border-top:2px solid #fff;padding-top:14px}
-.step i{color:var(--accent);font-style:normal;font-weight:700}
+.step i{color:var(--accent);font-style:normal;font-weight:800}
 .step b{display:block;margin:4px 0}
 .step p{font-size:14px;color:var(--sub)}
-details{border-top:1px solid var(--line);padding:18px 0}
+details{border-top:1px solid var(--line);padding:20px 0}
 details:last-child{border-bottom:1px solid var(--line)}
-summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between}
-summary:after{content:"+";color:var(--sub)}
+summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--accent);font-size:20px;line-height:1}
 details[open] summary:after{content:"−"}
 details p{margin-top:10px;color:var(--sub);font-size:15px}
-.end{text-align:center;padding:80px 0}
-.end h2{margin-bottom:12px}
-footer{padding:28px 0;text-align:center;color:var(--sub);font-size:13px;border-top:1px solid var(--line)}
+.end{text-align:center;padding:100px 0 110px;background:linear-gradient(180deg,var(--bg),#11160a)}
+.end h2{margin-bottom:14px}
+footer{padding:28px 0 90px;text-align:center;color:var(--sub);font-size:13px;border-top:1px solid var(--line)}
+/* floating kakao */
+.float{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:0 8px 24px rgba(0,0,0,.5)}
 /* modal */
-.modal{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;z-index:50;padding:20px}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.93);display:none;align-items:center;justify-content:center;z-index:50;padding:20px}
 .modal.on{display:flex}
 .mwrap{display:flex;align-items:center;gap:16px}
 .modal .box{position:relative;width:min(340px,70vw);aspect-ratio:9/16;background:#000;border-radius:14px;overflow:hidden}
 .modal iframe{width:100%;height:100%;border:0}
 .modal .x{position:fixed;top:14px;right:18px;background:none;border:0;color:#fff;font-size:34px;cursor:pointer;z-index:2}
-.nav-btn{background:rgba(255,255,255,.12);border:0;color:#fff;width:44px;height:44px;border-radius:50%;font-size:20px;cursor:pointer;flex:0 0 auto}
+.nav-btn{background:rgba(255,255,255,.12);border:0;color:#fff;width:44px;height:44px;border-radius:50%;font-size:22px;cursor:pointer;flex:0 0 auto}
 .minfo{position:fixed;bottom:16px;left:0;right:0;text-align:center;font-size:14px;color:#ccc}
-.empty{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--sub);text-align:center;padding:20px;font-size:14px}
 @media(max-width:520px){.nav-btn{position:fixed;bottom:50px;z-index:2}#prev{left:20px}#next{right:20px}}
 </style>
 </head>
@@ -135,67 +145,80 @@ footer{padding:28px 0;text-align:center;color:var(--sub);font-size:13px;border-t
 </div></nav>
 
 <header class="hero" id="top"><div class="wrap">
-  <span class="tag">브랜드 숏폼 · 기획부터 편집까지</span>
-  <h1><span>영상은 올리는데,</span><span>왜 문의로 <span class="hl" style="display:inline">안 이어질까요?</span></span></h1>
-  <p class="lead">브랜드가 말하고 싶은 얘기가 아니라, 고객이 멈춰서 보는 얘기로 시작합니다. OISTUDIO는 기획부터 편집까지 한 번에 맡아 드려요.</p>
+  <span class="eyebrow">BRAND SHORT-FORM STUDIO</span>
+  <h1>조회수는 나오는데,<br><span class="hl">문의는 왜 0건</span>일까요?</h1>
+  <p class="big">예쁘게 편집해도, 내 얘기가 아니면 고객은 바로 넘깁니다.</p>
+  <p class="lead">OISTUDIO는 <b style="color:#fff">'누구에게 무슨 말을 할지'</b>부터 정하고, 기획안·대본·편집까지 한 번에 만듭니다.</p>
   <div class="cta">
-    <a class="btn" data-kakao href="#">카톡으로 상담하기</a>
-    <a class="btn ghost" href="#works">작업물 보기</a>
+    <a class="btn" data-kakao href="#">카톡으로 무료 상담 →</a>
+    <a class="btn ghost" href="#works">작업물 먼저 볼게요</a>
   </div>
   <div class="chips">
-    <span>기획부터 편집까지 한 번에</span><span>단건 <b>12만 원</b>부터</span><span>기업·브랜드 전문</span>
+    <span>기획 + 대본 + 편집 <b>올인원</b></span><span>단건 <b>12만 원</b>부터</span><span>기업·브랜드 전문</span>
   </div>
-  <div class="strip-head"><span>대표 작업물 · 눌러서 바로 보기</span><a href="#works">전체 보기 →</a></div>
-  <div class="strip" id="strip"></div>
 </div></header>
 
-<section><div class="wrap">
-  <h2>혹시 이런 <span class="hl">고민</span>, 하고 계신가요?</h2>
-  <div class="rows">
-    <div class="row"><div>영상을 꾸준히 올리는데 <b>반응은 늘 제자리</b>예요</div><div>고객이 멈추는 <b>첫 3초</b>부터 설계해요</div></div>
-    <div class="row"><div>편집은 맡겼는데 <b>문의는 그대로</b>예요</div><div>편집 전에 <b>누구에게 무슨 말을 할지</b> 먼저 정해요</div></div>
-    <div class="row"><div>뭘 찍고 무슨 말을 해야 할지 <b>모르겠어요</b></div><div>장면과 대본을 <b>기획안에 다 적어 드려요</b></div></div>
-    <div class="row"><div>대본 고민하다 <b>하루가 다 가요</b></div><div>촬영본만 주세요. <b>나머지는 OISTUDIO가</b> 해요</div></div>
+<section id="works" style="padding-top:24px"><div class="wrap">
+  <div class="head">
+    <span class="eyebrow">WORKS</span>
+    <h2>말보다 영상으로 보여드릴게요</h2>
+    <p class="lead">뷰티 · 패션 · 식품까지. 눌러서 바로 재생해 보세요.</p>
   </div>
-</div></section>
-
-<section id="works"><div class="wrap">
-  <span class="tag">작업물</span>
-  <h2>업종도, 형식도 다양하게 만들었어요</h2>
   <div class="tabs" id="tabs"></div>
   <div class="works" id="works-grid"></div>
-  <div class="more" id="more"></div>
+</div></section>
+
+<section style="background:var(--bg2)"><div class="wrap">
+  <div class="head">
+    <span class="eyebrow">PROBLEM</span>
+    <h2>혹시 이렇게 <span class="hl">돈만 쓰고</span> 계신가요?</h2>
+  </div>
+  <div class="rows">
+    <div class="row"><div><small>지금</small>조회수는 나오는데 <b>문의는 0건</b></div><div><small>OISTUDIO</small>보는 사람이 <b>'내 얘기네'</b> 하는 첫 3초부터 설계해요</div></div>
+    <div class="row"><div><small>지금</small>편집만 맡겼더니 <b>예쁘기만 하고 안 팔려요</b></div><div><small>OISTUDIO</small>편집 전에 <b>누구에게 뭘 말할지</b> 먼저 정해요</div></div>
+    <div class="row"><div><small>지금</small>뭘 찍어야 할지 <b>감이 안 와요</b></div><div><small>OISTUDIO</small>장면과 대본까지 <b>기획안에 다 적어 드려요</b></div></div>
+    <div class="row"><div><small>지금</small>대본 고민하다 <b>하루가 다 가요</b></div><div><small>OISTUDIO</small>촬영본만 주세요. <b>나머지는 OISTUDIO가</b> 해요</div></div>
+  </div>
 </div></section>
 
 <section><div class="wrap">
-  <h2>왜 <span class="hl">OISTUDIO</span>일까요?</h2>
+  <div class="head">
+    <span class="eyebrow">WHY OISTUDIO</span>
+    <h2>편집자가 아니라 <span class="hl">기획자</span>가 먼저 움직여요</h2>
+  </div>
   <div class="grid3">
-    <div class="card acc"><h3>기획이 먼저</h3><p>예쁜 편집보다, 보는 사람이 끝까지 보는 구성을 먼저 생각해요.</p></div>
-    <div class="card acc"><h3>조사 기반</h3><p>제품 후기와 경쟁사 콘텐츠에서 고객이 반응하는 말을 찾아요.</p></div>
-    <div class="card acc"><h3>한 번에 진행</h3><p>조사, 기획안, 대본, 편집까지 창구 하나로 끝나요.</p></div>
+    <div class="card"><span class="n">01</span><h3>기획이 먼저</h3><p>예쁜 편집보다, 끝까지 보게 만드는 구성을 먼저 고민해요.</p></div>
+    <div class="card"><span class="n">02</span><h3>조사 기반</h3><p>제품 후기와 경쟁사 콘텐츠에서 고객이 반응하는 말을 찾아요.</p></div>
+    <div class="card"><span class="n">03</span><h3>창구 하나로 끝</h3><p>조사, 기획안, 대본, 편집까지. 여러 곳에 나눠 맡기지 않아도 돼요.</p></div>
   </div>
 </div></section>
 
-<section><div class="wrap">
-  <h2>같은 제품도 첫 문장이 바뀌면 달라집니다</h2>
+<section style="background:var(--bg2)"><div class="wrap">
+  <div class="head"><h2>같은 제품, <span class="hl">첫 문장</span>만 바꿔도 달라져요</h2></div>
   <div class="compare">
-    <div class="card"><p style="font-size:13px">기능으로 시작하면</p><h3 style="margin-top:8px;font-weight:600">"고함량 성분을 담은 신제품이 출시되었습니다"</h3></div>
-    <div class="card hot"><p class="hl" style="font-size:13px">고객의 불편으로 시작하면</p><h3 style="margin-top:8px">"이거 때문에 매번 고생하셨죠?"</h3></div>
+    <div class="card" style="background:var(--bg)"><p style="font-size:13px">제품 설명으로 시작하면</p><div class="q" style="color:#bbb">"고함량 성분을 담은 신제품이 출시되었습니다"</div><p style="margin-top:12px">→ 스크롤 넘김</p></div>
+    <div class="card hot"><p class="hl" style="font-size:13px">고객의 불편으로 시작하면</p><div class="q">"이거 때문에 매번 고생하셨죠?"</div><p style="margin-top:12px;color:#cfe88a">→ 끝까지 봄</p></div>
   </div>
-  <p class="sub" style="margin-top:14px;font-size:14px">누가 봐도 '내 얘기'인 문장이 먼저 나와야 끝까지 봅니다. (예시 문구는 실제 작업물 사례로 교체하세요)</p>
+  <p class="sub" style="margin-top:16px;font-size:14px">누가 봐도 '내 얘기'인 문장이 먼저 나와야 끝까지 봅니다.</p>
 </div></section>
 
 <section id="price"><div class="wrap">
-  <span class="tag">가격</span>
-  <h2>모든 구성에 기획부터 편집까지 들어 있어요</h2>
-  <div class="inc"><span>제품·경쟁사 조사</span><span>첫 3초 문구 제안</span><span>기획안·대본 작성</span><span>영상 편집(자막·음악)</span></div>
+  <div class="head">
+    <span class="eyebrow">PRICE</span>
+    <h2>많이 맡길수록, <span class="hl">더 아껴요</span></h2>
+    <p class="lead">모든 구성에 기획부터 편집까지 들어 있어요.</p>
+  </div>
+  <div class="inc"><span>제품·경쟁사 조사</span><span>첫 3초 문구 제안</span><span>기획안·대본 작성</span><span>영상 편집 (자막·음악)</span></div>
   <div class="price" id="price-grid"></div>
-  <p class="sub" style="margin-top:14px;font-size:13px">* VAT 별도 여부, 수정 횟수 등 세부 조건은 상담 시 안내드려요.</p>
+  <div class="note">
+    <h3>한 편은 운, 여러 편은 데이터예요</h3>
+    <p>같은 제품도 고객마다 반응하는 포인트가 달라요. 여러 편을 다른 각도로 올려야 '먹히는 문장'이 보이고, 편당 가격도 낮아져요.</p>
+  </div>
+  <p class="sub" style="margin-top:14px;font-size:13px">* VAT 여부, 수정 범위, 제작 일정은 상담 시 안내드려요. 아껴요 금액은 단건 가격 기준이에요.</p>
 </div></section>
 
-<section><div class="wrap">
-  <span class="tag">진행 방식</span>
-  <h2>이렇게 진행돼요</h2>
+<section style="background:var(--bg2)"><div class="wrap">
+  <div class="head"><span class="eyebrow">PROCESS</span><h2>이렇게 진행돼요</h2></div>
   <div class="steps">
     <div class="step"><i>1</i><b>상담</b><p>카톡으로 제품 링크와 지금 가장 답답한 점을 보내 주세요.</p></div>
     <div class="step"><i>2</i><b>자료 전달</b><p>제품 사진, 촬영본, 상세페이지 주소를 전달해 주세요.</p></div>
@@ -206,7 +229,7 @@ footer{padding:28px 0;text-align:center;color:var(--sub);font-size:13px;border-t
   <div id="faq">
     <details><summary>찍어 둔 영상이 없어도 되나요?</summary><p>상담 때 상황에 맞게 안내드려요. 촬영 가이드를 기획안에 함께 담아 드릴 수 있어요.</p></details>
     <details><summary>얼굴이 안 나와도 되나요?</summary><p>네, 제품 중심 영상이나 자막 중심 구성으로도 기획할 수 있어요.</p></details>
-    <details><summary>수정은 어떻게 하나요?</summary><p>1차 완성본을 보신 뒤 수정 요청을 주시면 반영해 최종본을 드려요. (수정 범위는 상담 시 확정)</p></details>
+    <details><summary>수정은 어떻게 하나요?</summary><p>1차 완성본을 보신 뒤 수정 요청을 주시면 반영해 최종본을 드려요. 수정 범위는 상담 시 확정해요.</p></details>
     <details><summary>몇 편 구성이 좋을까요?</summary><p>한 편만으로는 어떤 메시지가 반응하는지 알기 어려워요. 여러 각도로 테스트하려면 패키지를 추천드려요.</p></details>
     <details><summary>조회수나 매출을 보장하나요?</summary><p>보장하지는 않아요. 대신 반응이 나올 확률을 높이는 기획과 구성에 집중합니다.</p></details>
     <details><summary>영상을 올려 주기도 하나요?</summary><p>제작 전달까지가 기본이에요. 업로드 대행은 상담 시 따로 안내드려요.</p></details>
@@ -214,12 +237,14 @@ footer{padding:28px 0;text-align:center;color:var(--sub);font-size:13px;border-t
 </div></section>
 
 <section class="end"><div class="wrap">
-  <h2>우리 브랜드 영상, 어디부터 바꿔야 할까요?</h2>
-  <p class="sub" style="margin-bottom:24px">제품 링크와 지금 가장 답답한 점 한 줄이면 충분해요.</p>
-  <a class="btn" data-kakao href="#">카톡으로 상담하기</a>
+  <h2>지금 올리는 영상,<br><span class="hl">이대로 괜찮으세요?</span></h2>
+  <p class="sub" style="margin-bottom:28px">제품 링크와 지금 가장 답답한 점 한 줄이면 충분해요.</p>
+  <a class="btn" data-kakao href="#">카톡으로 무료 상담 →</a>
 </div></section>
 
 <footer>© OISTUDIO. All rights reserved.</footer>
+
+<a class="btn float" data-kakao href="#">카톡 상담</a>
 
 <div class="modal" id="modal">
   <button class="x" id="close" aria-label="닫기">×</button>
@@ -233,121 +258,95 @@ footer{padding:28px 0;text-align:center;color:var(--sub);font-size:13px;border-t
 
 <script>
 /* ============ 여기만 수정하세요 ============ */
-const KAKAO_LINK = "#"; // 카카오 오픈채팅 주소로 교체 (예: https://open.kakao.com/o/xxxx)
+const KAKAO_LINK = "https://open.kakao.com/o/sHbTWGOi";
 
-const T1 = "광고 소재형", T2 = "스토리·후기형", T3 = "리뷰·체험형";
-
-// 작업물 20개: w("제목", "업종 · 제품", 형식, "유튜브 영상ID", "썸네일 경로(선택)")
-// 유튜브 영상ID = 주소의 v= 뒤 값 (쇼츠는 shorts/ 뒤 값). 썸네일은 비워두면 유튜브 기본 썸네일 사용
-const w = (title, cat, type, y = "", thumb = "") => ({ title, cat, type, y, thumb });
+// 작업물: w("분류(탭)", "표시 이름", "유튜브영상ID", "제목(선택)")
+// 순서대로 번호가 매겨지고 4열로 배치돼요. 제목을 비우면 표시 이름만 보여요.
+const w = (g, cat, y, title = "") => ({ g, cat, y, title });
 const WORKS = [
-  w("작업물 제목 01", "업종 · 제품", T1),
-  w("작업물 제목 02", "업종 · 제품", T2),
-  w("작업물 제목 03", "업종 · 제품", T3),
-  w("작업물 제목 04", "업종 · 제품", T1),
-  w("작업물 제목 05", "업종 · 제품", T2),
-  w("작업물 제목 06", "업종 · 제품", T3),
-  w("작업물 제목 07", "업종 · 제품", T1),
-  w("작업물 제목 08", "업종 · 제품", T2),
-  w("작업물 제목 09", "업종 · 제품", T3),
-  w("작업물 제목 10", "업종 · 제품", T1),
-  w("작업물 제목 11", "업종 · 제품", T2),
-  w("작업물 제목 12", "업종 · 제품", T3),
-  w("작업물 제목 13", "업종 · 제품", T1),
-  w("작업물 제목 14", "업종 · 제품", T2),
-  w("작업물 제목 15", "업종 · 제품", T3),
-  w("작업물 제목 16", "업종 · 제품", T1),
-  w("작업물 제목 17", "업종 · 제품", T2),
-  w("작업물 제목 18", "업종 · 제품", T3),
-  w("작업물 제목 19", "업종 · 제품", T1),
-  w("작업물 제목 20", "업종 · 제품", T2)
+  w("뷰티", "뷰티", "fK9aXUePUtQ"),
+  w("뷰티", "뷰티", "EOGnaQVLezw"),
+  w("뷰티", "뷰티", "TjyoJ3qQWbQ"),
+  w("뷰티", "뷰티", "asTHi1pb7PI"),
+  w("뷰티", "뷰티", "qz-367z87k8"),
+  w("뷰티", "뷰티", "U8F4iXJGTxU"),
+  w("뷰티", "뷰티", "a0XwEmgDpPk"),
+  w("식품", "건강기능식품", "6XFf3pjQS9k"),
+  w("패션", "패션", "6HI3Hibmv1c"),
+  w("패션", "패션", "eLXPHih5-zo"),
+  w("패션", "패션", "CvxPaVwgLfA"),
+  w("패션", "패션", "J8LF4LzOnTQ"),
+  w("패션", "패션", "1YdAfps9jwk"),
+  w("식품", "후르츠", "qzdU9dBNtU4"),
+  w("식품", "떡방", "QOfWh6TxRB0"),
+  w("식품", "후르츠", "o_Boj6RR1Dk")
 ];
-const FEATURED = 6;   // 맨 위 '대표 작업물'에 보여줄 개수 (위에서부터)
-const PAGE = 8;       // 작업물 한 번에 보여줄 개수 (더보기 누를 때마다 추가)
 
-// 가격 (원 단위 숫자)
+// 가격 (원 단위). '아껴요' 금액은 단건 가격 기준으로 자동 계산돼요.
+const SINGLE = 120000;
 const PRICES = [
-  {tag:"단건",   count:"1편",  total:120000,  desc:"먼저 한 편 맡겨 보고 싶을 때"},
-  {tag:"패키지", count:"8편",  total:1100000, desc:"일주일에 2편씩 꾸준히 올리고 싶을 때"},
-  {tag:"패키지", count:"10편", total:1200000, desc:"더 자주 올리며 반응 좋은 방향을 찾고 싶을 때"},
-  {tag:"패키지", count:"12편", total:1400000, desc:"일주일에 3편씩, 가장 알뜰하게 맡기고 싶을 때", best:true}
+  {count:1,  total:120000,  desc:"먼저 한 편 맡겨 보고 싶을 때"},
+  {count:8,  total:900000,  desc:"일주일에 2편씩 꾸준히 올리고 싶을 때"},
+  {count:10, total:1050000, desc:"더 자주 올리며 반응 좋은 방향을 찾고 싶을 때"},
+  {count:12, total:1200000, desc:"일주일에 3편씩, 가장 알뜰하게 맡기고 싶을 때", best:true}
 ];
 /* =========================================== */
 
 const $ = id => document.getElementById(id);
 const pad = n => String(n + 1).padStart(2, "0");
+const man = n => Number((n / 10000).toFixed(2));
 WORKS.forEach((x, i) => x.i = i);
 
 document.querySelectorAll("[data-kakao]").forEach(a => {
-  a.href = KAKAO_LINK;
-  if (KAKAO_LINK !== "#") { a.target = "_blank"; a.rel = "noopener"; }
+  a.href = KAKAO_LINK; a.target = "_blank"; a.rel = "noopener";
 });
 
-// 카드
+// 작업물 (탭)
+const groups = ["전체", ...new Set(WORKS.map(x => x.g))];
+let cur = "전체";
 function card(x) {
-  const src = x.thumb || (x.y ? `https://img.youtube.com/vi/${x.y}/hqdefault.jpg` : "");
   return `<div class="work" data-i="${x.i}">
-    <div class="thumb"><span class="no">${pad(x.i)}</span>${src ? `<img src="${src}" alt="${x.title}" loading="lazy">` : ""}<div class="play"></div></div>
-    <small>${x.cat}</small><b>${x.title}</b></div>`;
+    <div class="thumb"><span class="no">${pad(x.i)}</span><img src="https://img.youtube.com/vi/${x.y}/hqdefault.jpg" alt="${x.cat} 작업물 ${pad(x.i)}" loading="lazy"><div class="play"></div></div>
+    <div class="cap">${x.title || x.cat}${x.title ? `<small>${x.cat}</small>` : ""}</div></div>`;
 }
-function bindCards(root) {
-  root.querySelectorAll(".work").forEach(el => el.onclick = () => openVideo(+el.dataset.i));
-}
-
-// 대표 작업물 스트립
-$("strip").innerHTML = WORKS.slice(0, FEATURED).map(card).join("");
-bindCards($("strip"));
-
-// 작업물 그리드 (탭 + 더보기)
-const types = ["전체", ...new Set(WORKS.map(x => x.type))];
-let cur = "전체", shown = PAGE, list = WORKS;
 function renderTabs() {
-  $("tabs").innerHTML = types.map(t => {
-    const n = t === "전체" ? WORKS.length : WORKS.filter(x => x.type === t).length;
+  $("tabs").innerHTML = groups.map(t => {
+    const n = t === "전체" ? WORKS.length : WORKS.filter(x => x.g === t).length;
     return `<button class="${t === cur ? "on" : ""}" data-t="${t}">${t} ${n}</button>`;
   }).join("");
-  $("tabs").querySelectorAll("button").forEach(b => b.onclick = () => {
-    cur = b.dataset.t; shown = PAGE; renderTabs(); renderWorks();
-  });
+  $("tabs").querySelectorAll("button").forEach(b => b.onclick = () => { cur = b.dataset.t; renderTabs(); renderWorks(); });
 }
 function renderWorks() {
-  list = cur === "전체" ? WORKS : WORKS.filter(x => x.type === cur);
-  $("works-grid").innerHTML = list.slice(0, shown).map(card).join("");
-  bindCards($("works-grid"));
-  const left = list.length - shown;
-  $("more").innerHTML = left > 0
-    ? `<p class="count">${Math.min(shown, list.length)} / ${list.length}편</p><button class="btn ghost" id="moreBtn">작업물 더보기 (${left}편 남음)</button>`
-    : `<p class="count">전체 ${list.length}편을 모두 보셨어요</p>`;
-  if (left > 0) $("moreBtn").onclick = () => { shown += PAGE; renderWorks(); };
+  const list = cur === "전체" ? WORKS : WORKS.filter(x => x.g === cur);
+  $("works-grid").innerHTML = list.map(card).join("");
+  $("works-grid").querySelectorAll(".work").forEach(el => el.onclick = () => openVideo(+el.dataset.i));
 }
 renderTabs(); renderWorks();
 
 // 가격
-const fmt = n => { const m = n / 10000; return Number.isInteger(m) ? m : m.toFixed(1); };
-$("price-grid").innerHTML = PRICES.map(p => `
-  <div class="pcard ${p.best ? "best" : ""}">
-    <span class="t">${p.tag} · ${p.count}</span>
-    <div class="n">${fmt(p.total)}<small>만 원</small></div>
-    <p>${p.desc}</p>
-  </div>`).join("");
+$("price-grid").innerHTML = PRICES.map(p => {
+  const save = SINGLE * p.count - p.total;
+  const badge = save > 0 ? `<span class="badge">${man(save)}만 원 아껴요</span>` : "";
+  return `<div class="pcard ${p.best ? "best" : ""}">${badge}
+    <span class="t">${p.count === 1 ? "단건" : "패키지"} · ${p.count}편</span>
+    <div class="n">${man(p.total)}<small>만 원</small></div>
+    <div class="per">편당 ${man(p.total / p.count)}만 원</div>
+    <hr><p>${p.desc}</p></div>`;
+}).join("");
 
 // 영상 모달 (이전/다음, 키보드 ← → 지원)
 let playing = -1, ctx = WORKS;
 function openVideo(i) {
-  // 현재 보고 있는 탭의 목록 안에서 이동
-  ctx = (cur === "전체" ? WORKS : WORKS.filter(x => x.type === cur));
-  if (!ctx.find(x => x.i === i)) ctx = WORKS;
+  ctx = cur === "전체" ? WORKS : WORKS.filter(x => x.g === cur);
   show(i);
   $("modal").classList.add("on");
 }
 function show(i) {
   playing = i;
   const x = WORKS[i];
-  $("player").innerHTML = x.y
-    ? `<iframe src="https://www.youtube.com/embed/${x.y}?autoplay=1&rel=0&playsinline=1" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>`
-    : `<div class="empty">영상 준비 중입니다</div>`;
+  $("player").innerHTML = `<iframe src="https://www.youtube.com/embed/${x.y}?autoplay=1&rel=0&playsinline=1" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>`;
   const pos = ctx.findIndex(v => v.i === i) + 1;
-  $("minfo").textContent = `${pos} / ${ctx.length}  ·  ${x.cat}  ·  ${x.title}`;
+  $("minfo").textContent = `${pos} / ${ctx.length}  ·  ${x.cat}${x.title ? "  ·  " + x.title : ""}`;
 }
 function step(d) {
   const pos = ctx.findIndex(v => v.i === playing);
