@@ -111,6 +111,20 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:5
 .addon li{font-size:16px;display:flex;gap:10px}
 .addon li:before{content:"✓";color:var(--accent);font-weight:800}
 @media(max-width:760px){.addon{grid-template-columns:1fr;padding:26px 22px;gap:22px}}
+.hero{overflow-x:clip}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
+.hero-phones{position:relative;height:600px}
+.hero-phones:before{content:"";position:absolute;inset:6% -4%;background:radial-gradient(closest-side,rgba(200,255,61,.16),transparent);pointer-events:none}
+.phone{position:absolute;width:224px;aspect-ratio:9/19;border-radius:40px;padding:8px;background:linear-gradient(145deg,#5a5a5e,#1a1a1c 40%,#3c3c40);box-shadow:0 30px 60px rgba(0,0,0,.65),inset 0 0 0 1px rgba(255,255,255,.18);cursor:pointer;transition:transform .3s}
+.phone .screen{position:relative;width:100%;height:100%;border-radius:33px;overflow:hidden;background:#000;display:flex;align-items:center;justify-content:center}
+.phone .screen:after{content:"";position:absolute;top:9px;left:50%;transform:translateX(-50%);width:32%;height:20px;border-radius:99px;background:#000;z-index:2}
+.phone iframe{width:100%;aspect-ratio:9/16;border:0;pointer-events:none;transform:scale(1.04)}
+.phone.p1{left:0;top:30px;transform:rotate(-7deg);z-index:2}
+.phone.p2{right:0;top:96px;transform:rotate(9deg)}
+.phone.p1:hover{transform:rotate(-7deg) translateY(-6px)}
+.phone.p2:hover{transform:rotate(9deg) translateY(-6px)}
+.phone-cap{position:absolute;left:0;right:0;bottom:0;text-align:center;font-size:13px;color:var(--sub)}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-phones{height:460px;max-width:400px;width:100%;margin:12px auto 0}.phone{width:190px}.phone.p2{top:80px}}
 .flow{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:48px}
 .flow>div{background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:20px 22px}
 .flow i{font-style:normal;color:var(--accent);font-weight:800;font-size:12px;letter-spacing:.08em;display:block}
@@ -176,6 +190,8 @@ footer{padding:28px 0 90px;text-align:center;color:var(--sub);font-size:13px;bor
 </div></nav>
 
 <header class="hero" id="top"><div class="wrap">
+  <div class="hero-grid">
+  <div class="hero-copy">
   <span class="eyebrow">PLAN · EDIT · INFLUENCER SEEDING</span>
   <h1>기획부터 편집,<br><span class="hl">인플루언서 시딩</span>까지<br>한 번에.</h1>
   <p class="big">영상만 만들어 드리고 끝내지 않아요.</p>
@@ -186,6 +202,17 @@ footer{padding:28px 0 90px;text-align:center;color:var(--sub);font-size:13px;bor
   </div>
   <div class="chips">
     <span>기획 · 편집 + <b>인플루언서 시딩</b></span><span>단건 <b>12만 원</b>부터</span><span>기업·브랜드 전문</span>
+  </div>
+  </div>
+  <div class="hero-phones">
+      <div class="phone p1" data-i="7" role="button" aria-label="영상 크게 보기">
+        <div class="screen"><iframe src="https://www.youtube.com/embed/6XFf3pjQS9k?autoplay=1&mute=1&loop=1&playlist=6XFf3pjQS9k&controls=0&playsinline=1&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1" loading="lazy" allow="autoplay; encrypted-media" tabindex="-1" title="작업물 미리보기"></iframe></div>
+      </div>
+      <div class="phone p2" data-i="1" role="button" aria-label="영상 크게 보기">
+        <div class="screen"><iframe src="https://www.youtube.com/embed/EOGnaQVLezw?autoplay=1&mute=1&loop=1&playlist=EOGnaQVLezw&controls=0&playsinline=1&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1" loading="lazy" allow="autoplay; encrypted-media" tabindex="-1" title="작업물 미리보기"></iframe></div>
+      </div>
+      <p class="phone-cap">탭하면 소리와 함께 크게 재생돼요</p>
+  </div>
   </div>
   <div class="flow">
     <div><i>STEP 01</i><b>기획 · 대본</b><span>조사 → 첫 3초 문구 → 대본</span></div>
@@ -418,6 +445,7 @@ $("price-grid").innerHTML = PRICES.map(p => {
 let playing = -1, ctx = WORKS;
 function openVideo(i) {
   ctx = cur === "전체" ? WORKS : WORKS.filter(x => x.g === cur);
+  if (!ctx.some(v => v.i === i)) ctx = WORKS;
   show(i);
   $("modal").classList.add("on");
 }
@@ -443,6 +471,7 @@ document.addEventListener("keydown", e => {
   if (e.key === "ArrowLeft") step(-1);
   if (e.key === "ArrowRight") step(1);
 });
+document.querySelectorAll(".phone").forEach(el => el.onclick = () => openVideo(+el.dataset.i));
 </script>
 </body>
 </html>
